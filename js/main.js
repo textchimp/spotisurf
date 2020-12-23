@@ -147,8 +147,12 @@ const api = {
     .done( data => {
       console.log('initial token:', data);
       this.SPOTIFY_AUTH_BEARER = 'Bearer ' + data.token;
+      $('#searchText').attr('placeholder', 'search artist');
     })
-    .fail( err => console.warn('initial token load fail', err) );
+    .fail( err => {
+      $('#searchText').attr('placeholder', 'token error! sorry');
+      console.warn('initial token load fail', err)
+    });
   }, // fetchInitialToken
 
   getSearchResults( text ){
