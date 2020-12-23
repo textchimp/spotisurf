@@ -147,7 +147,9 @@ const api = {
     .done( data => {
       console.log('initial token:', data);
       this.SPOTIFY_AUTH_BEARER = 'Bearer ' + data.token;
-      $('#searchText').attr('placeholder', 'search artist');
+      $('#searchText')
+        .attr({ disabled: false, placeholder: 'search artist' })
+        .focus();
     })
     .fail( err => {
       $('#searchText').attr('placeholder', 'token error! sorry');
