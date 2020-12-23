@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<form id="search">
+  <input type="text" id="searchText" placeholder="search artist">
+  <button>go</button>
+</form>
+
+<div id="status"></div>
+
+<div id="trail">
+  <strong>Trail</strong>: &nbsp; <ul class="trail"></ul>
+</div>
+
+<div id="details">
+  <h2 class="loading">Loading artist...</h2>
+  <div class="heading">
+    <h2><a id="artistName" target="_blank"></a></h2>
+    <span class="genres"></span>
+  </div>
+  <div class="grid">
+    <div class="topTracks">
+      <h4>Top Tracks</h4>
+      <ol></ol>
+    </div><div class="recs">
+      <h4>Recommendations</h4>
+      <ul></ul>
+    </div>
+  </div><!-- grid -->
+</div>
+
+
+<div id="results">
+  <h2>Results for <em><span id="query"></span></em></h2>
+  <ul id="resultsList"></ul>
+</div>
+
+
+</body>
+</html>
